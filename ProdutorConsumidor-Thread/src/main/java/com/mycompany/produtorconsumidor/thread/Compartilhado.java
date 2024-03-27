@@ -17,7 +17,7 @@ public class Compartilhado {
     private int tamanhoBuffer;
 
     public Compartilhado() {
-		this(0,5)
+		this(0,5);
 	 }
     
     public Compartilhado(int buffer, int tamanhoBuffer) {
@@ -25,6 +25,21 @@ public class Compartilhado {
          setTamanhoBuffer(tamanhoBuffer);
     }
 
+        public int getBuffer() {
+        return buffer;
+    }
+
+    public void setBuffer(int buffer) {
+        this.buffer = buffer;
+    }
+
+    public int getTamanhoBuffer() {
+        return tamanhoBuffer;
+    }
+
+    public void setTamanhoBuffer(int tamanhobuffer) {
+        this.tamanhoBuffer = tamanhobuffer;
+    }
 	 //Gets e sets    
     public synchronized void consumir() {
 		setBuffer(getBuffer() - 1);

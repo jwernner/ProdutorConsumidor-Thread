@@ -8,21 +8,12 @@ package com.mycompany.produtorconsumidor.thread;
  *
  * @author Jorge
  */
-public class Produtor implements Runnable {
+public class Consumidor implements Runnable {
 
     private Compartilhado x;
     private int tempo;
 
-    public Produtor(Compartilhado x) {
-                this.x = x;
-    }
-    //Gets e sets
-
-    public Compartilhado getX() {
-        return x;
-    }
-
-    public void setX(Compartilhado x) {
+    public Consumidor(Compartilhado x) {
         this.x = x;
     }
 
@@ -42,7 +33,7 @@ public class Produtor implements Runnable {
                 Thread.sleep((int) (Math.random() * getTempo()));
             } catch (InterruptedException e) {
             }
-            x.produzir();
+            x.consumir();
         }
     }
 }
