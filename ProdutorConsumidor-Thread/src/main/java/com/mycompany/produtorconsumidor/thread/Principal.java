@@ -1,25 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.produtorconsumidor.thread;
 
-/**
- *
- * @author Jorge
- */
 public class Principal {
 
     public static void main(String[] args) {
-	    //Cria o recurso compartilhado entre produto e consumidor
-        Compartilhado recurso = new Compartilhado(); 
+        //Cria o recurso compartilhado entre produto e consumidor
+        Compartilhado recurso = new Compartilhado();
         //Cria os consumidores
         Consumidor c1 = new Consumidor(recurso);
         Consumidor c2 = new Consumidor(recurso);
         //Define o tempo de atraso do consumidor
         c1.setTempo(750);
         c2.setTempo(1000);
-       
+
         //Cria os produtor
         Produtor p1 = new Produtor(recurso);
         //Define o tempo de atraso do produto
@@ -36,4 +28,3 @@ public class Principal {
         t3.start();
     }
 }
-

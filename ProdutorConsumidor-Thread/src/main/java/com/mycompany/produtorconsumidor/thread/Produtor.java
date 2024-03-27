@@ -14,15 +14,6 @@ public class Produtor implements Runnable {
     private int tempo;
 
     public Produtor(Compartilhado x) {
-                this.x = x;
-    }
-    //Gets e sets
-
-    public Compartilhado getX() {
-        return x;
-    }
-
-    public void setX(Compartilhado x) {
         this.x = x;
     }
 
